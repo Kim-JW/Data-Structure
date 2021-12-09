@@ -22,6 +22,7 @@ public class GradeApp {
 		int numStudent = sc.nextInt();
 		
 		Student[] students = new Student[numStudent];
+		System.out.println("(이름,국어,영어,수학) 형식으로 입력하세요. ex) 홍길동,100,90,50 ");
 		
 		sc = new Scanner(System.in);
 		
