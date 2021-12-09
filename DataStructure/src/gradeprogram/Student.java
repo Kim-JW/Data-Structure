@@ -7,6 +7,13 @@ public class Student {
 	private int eng;
 	private int math;
 	
+	private int total;
+	private float avg;
+	
+	public Student() {
+		
+	}
+	
 	public Student(String name, int kor, int eng, int math) {
 		super();
 		this.name = name;
@@ -63,4 +70,12 @@ public class Student {
 				,math
 				,this.Avg());
 	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+//		return name + '\t' + kor + '\t' ...
+		return name;
+	}
+	
 }
