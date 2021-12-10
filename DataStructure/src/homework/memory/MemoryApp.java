@@ -8,6 +8,16 @@ public class MemoryApp {
 		Memory mq = new MyQueue();
 		Memory ms = new MyStack();
 		
+		/*
+		 * MyQueue mq = new MyQueue();
+		 * MyStack ms = new MyStack();
+		 * 
+		 * Memory m = null; 
+		 * 
+		 * 이렇게 해도 됨.
+		 */
+		
+		
 		Scanner sc;
 		
 		while(true) {
