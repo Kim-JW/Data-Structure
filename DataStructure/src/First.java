@@ -14,11 +14,48 @@
  * final - has A 관계로만 써라, 더 이상 상속 하지 않는다. extends 못쓴다.
  * 
  * final method - 더 이상 변경하지 않겠다. 확장, 즉 오버라이드 금지.
+ *
+ * 추상 클래스는 상속을 목적으로 만들어진
+ * 
+ * 일부분이 추상화 시킨 것.
+ * 
+ * abstract method는 반드시 오버라이드 해야한다. (강제성 부여)
+ * 
+ * 동적바인딩 사용가능 범위
+ * - 부모가 알고 있는 범위까지
+ * - 자식의 따로 추가한 것은 접근 불가능
+ * 
+ * 부모의 레퍼런스로 자식을 접근 - 동적 바인딩
+ * 
+ * 동적 바인딩
+ * - 부모 레퍼런스로 자식 접근
+ * 
+ * 왜 추상화 시키는가?
+ * 1. Super class를 
  * 
  */
 
+interface ss {
+	final static int num = 100;
+//	int num = 100; final static 생략되어 있다.
+	void disp(); // abstract 생략되어있다.
+}
 
-public class First {
+
+interface sss extends ss{
+	final static int num = 100;
+//	int num = 100; final static 생략되어 있다.
+	void disp(); // abstract 생략되어있다.
+}
+
+
+interface ssss extends ss, sss {
+	final static int num = 100;
+//	int num = 100; final static 생략되어 있다.
+	void disp(); // abstract 생략되어있다.
+}
+
+public class First implements ssss{
 	// method
 	
 	// field
@@ -63,6 +100,12 @@ public class First {
 		System.out.println(bb.getA() + "\t" + bb.getB()); // 10, 0
 		System.out.println(cc.getA() + "\t" + cc.getB()); // 20, 30
 		
+		
+	}
+
+	@Override
+	public void disp() {
+		// TODO Auto-generated method stub
 		
 	}
 
